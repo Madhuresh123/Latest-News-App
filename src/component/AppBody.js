@@ -95,7 +95,13 @@ function AppBody() {
         setText("")
     }
 
+    const handleClickCopy = () => {
+        navigator.clipboard.writeText(text)
+    }
+
     const handleClickSpace = () => {
+        let newText = text.split(/[ ]+/)
+        setText(newText.join(" "))
     }
 
     return (
@@ -108,13 +114,12 @@ function AppBody() {
                 <button type='button' onClick={handleClickLower}>To Lower case</button>
                 <button type='button' onClick={handleClickMode}>Dark mode</button>
                 <button type='button' onClick={handleClickClear}>Clear</button>
-                <button type='button' onClick={handleClickSpace}>Remove space</button>
-
-
+                <button type='button' onClick={handleClickCopy}>Copy</button>
+                <button type='button' onClick={handleClickSpace}>Space</button>
 
             </div>
             <div className='result'>
-                <p>No.of words = {text.split(" ").filter((element) => (element.length !== 0)).length}</p>
+                <p>No.of words = {text.split(/\s+/).filter((element) => (element.length !== 0)).length}</p>
                 <p>No.of character = {text.replace(/\s+/g, '').length}</p>
             </div>
             <div>
