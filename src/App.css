@@ -3,7 +3,7 @@
 }
 
 .header{
-    width:100vw;
+    width:100%;
     height: 6rem;
     background-color: yellow;
     display: flex;
@@ -75,12 +75,54 @@
     .appBody > textarea{
         min-width: 20rem;
     }
-/* 
-    .appBody{
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-    } */
+
   }
+
+.row{
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr); /* Creates four equal-width columns */
+    grid-gap: 1px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    width: 100%; /* Ensure the grid takes up the full width of its container */
+}
+
+.column{
+    margin: 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 100rem;
+    margin: 1rem;
+    margin-right: 0;
+    padding: 1rem;
+}
+
+.card > img{
+    width: 18rem;
+    height: 10rem;
+
+}
+.card_content {
+    flex-grow: 1; /* Allow content to grow and push button to the bottom */
+  }
+  
+  .card > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 2rem;
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: auto; /* Push the button to the bottom */
+  }
+
+.pageChange{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+
+}

@@ -7,7 +7,7 @@ function Header(props) {
     <>
    <div className='header'>
     <Link className='header_left' to='/'>{props.title}</Link>
-    <Link className='header_right' to='/about'>{props.about}</Link>  
+    <Link className='header_right' to='/news'>{props.about}</Link>  
    </div>
    <div style= {{height: "2rem"}}>
    <div className='alert'>
